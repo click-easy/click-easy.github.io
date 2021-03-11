@@ -16,6 +16,15 @@
     <script src="assets/js/formdata-polyfill.js"></script>
     <script src="assets/js/promise-polyfill.js"></script>
     <script src="assets/js/whatwg-fetch.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WX5FMX4JTH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WX5FMX4JTH');
+    </script>
     
 </head>
 
@@ -144,8 +153,9 @@
   form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => alert("Merci pour votre confiance ! Nous vous recontacterons lorsque notre plateforme d'entraide sera opérationnelle :)", response))
-      .catch(error => alert('Error!', error.message))
+      .then(response => window.location.href = 'thanks.html')
+      //.then(response => alert("Merci pour votre confiance ! Nous vous recontacterons lorsque notre plateforme d'entraide sera opérationnelle :)", response))
+      //.catch(error => alert('Error!', error.message))
   })
 </script>
 
