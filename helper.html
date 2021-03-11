@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <title>Merci!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="assets/images/logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,300,500,600,700,900&display=swap">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/plugins.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/skin-clickeasy.css">
+    
+</head>
+
+<body>
+
+<!-- Loading -->
+<!--<div id="preloader" class="preloader">
+    <div class="preloader-inner">
+        <div class="preloader-1"></div>
+    </div>
+</div>-->
+
+    <!-- Start Header -->
+    <header class="site-header">
+        <div class="header-logo">
+            <a href="index.html" title="Miro - HTML5 Template">
+            	<span><img src="assets/images/logo-black.png"></img>&nbsp;ClickEasy</span>
+            </a>
+        </div>
+        <!--<div class="header-button">
+        	<a href="help.html" class="button button-md-large">J'ai un code</a>
+        </div>-->
+        <!--<div class="header-menu button-open-sidenav">
+            <a href="#">
+                <span></span>
+            </a>
+        </div>-->
+        
+        <!--<div class="header-follow">
+            <ul>
+                <li>
+                    <a href="https://www.twiiter.com"><i class="ti-twitter-alt"></i></a>
+                </li>
+                <li>
+                    <a href="https://github.com"><i class="ti-github"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=UrIiLvg58SY"><i class="ti-youtube"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com"><i class="ti-linkedin"></i></a>
+                </li>
+            </ul>
+            <p>Suivez-nous</p>
+        </div>-->
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Sidenav -->
+    <!--<div class="site-sidenav">
+        <div class="sidenav-menu">
+            <h2 class="logo">ClickEasy</h2>
+            <button class="button button-close-sidenav"></button>
+            <ul class="menu">
+                <li>
+                    <a href="#home">Accueil</a>
+                    <i class="ti-arrow-right"></i>
+                </li>
+                <li>
+                    <a href="#about">Comment ça marche ?</a>
+                    <i class="ti-arrow-right"></i>
+                </li>
+                <li>
+                    <a href="#resume">Resume</a>
+                    <i class="ti-arrow-right"></i>
+                </li>
+                <li>
+                    <a href="#services">Devenez Helper !</a>
+                    <i class="ti-arrow-right"></i>
+                </li>
+                <li>
+                    <a href="#portfolio">Projects</a>
+                    <i class="ti-arrow-right"></i>
+                </li>
+                <li>
+                    <a href="#testimonials">Témoignages</a>
+                    <i class="ti-arrow-right"></i>
+                </li>
+                <li>
+                    <a href="#blog">Blog Posts</a>
+                    <i class="ti-arrow-right"></i>
+                </li>
+                <li>
+                    <a href="#contact">Nous contacter</a>
+                    <i class="ti-arrow-right"></i>
+                </li>
+            </ul>
+        </div>
+        <span class="sidenav-close"></span>
+    </div>-->
+    <!-- End Sidenav -->
+
+    <!-- Start Wrapper -->
+    <div id="site-wrapper">
+
+        <!-- Start Hero -->
+        <section class="section section-hero section-hero-1 overlay-image" style="background-image: url(assets/images/home.jpg);">
+            <div class="hero-content">
+                <!--<br><br><br><br><br>-->
+                <div id="particles-js-one" class="particles-js"></div>
+                <div class="container" style="height: 100%;">
+                    <div class="row row-0" style="height:15%"></div>
+                    <div class="row row-0">
+                    	<div class="col-lg-12">
+                            <div class="hero-box">
+                                <p class="hero-icon"><span> </span></p>
+                                <h1 style="text-shadow: 1px 1px 30px grey">Devenez Helper !</h1>
+                                <p style="text-shadow: 1px 1px 15px grey">Notre plateforme est encore en cours de développement. Si vous souhaitez en savoir plus sur notre fonctionnement et potentiellement devenir helper, n'hésitez pas à nous donner votre mail, nous vous recontacterons au plus vite.</p><br>
+                                <form id='myform' name="submit-to-google-sheet">
+                                    <input name="email" type="email" placeholder="Mon email" style="width:70%; line-height:130%; padding:4px;" required><br><br>
+                                    <input name="competences" type="text" placeholder="Mes compétences principales" style="width:70%; line-height:130%; padding:4px;"><br><br>
+                                    <button class="button button-md" type="submit">Valider</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>               
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyqwwHmPgX4fmzLQccmvzanBA0E1ZOj2gX5h9-8otZMMUmFk8u591GClSQylyZA09JIDA/exec'
+  const form = document.getElementById('myform');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => window.location.href = 'thanks_helper.html')
+      //.then(response => alert("Merci pour votre confiance ! Nous reviendrons vers vous au plus vite.", response))
+      //.catch(error => alert('Error!', error.message))
+  })
+</script>
+
+	            <!--<div class="hero-form">
+					    <div class="form-group">
+					        <div class="col-md-8">
+					        	<form accept-charset="UTF-8" action="" method="POST">
+						            <textarea class="form-control" rows="5" id="text" name="text" 
+						            maxlength="500" placeholder="Décrivez votre problème en quelques mots" required></textarea>
+
+						            <span id="count_message" style="font-size: 10pt"></span>
+							            <br>
+
+							        <button class="button button-md" type="submit" style="float: right;">Trouver un Helper</button>
+
+						    	</form>
+						    <br>
+						    <br>
+					        </div>
+					    </div>
+					</div>
+				</div> -->
+				<div class="hero-footer">
+					<center>
+					<h4 style="font-size:2vh"> L'informatique à la portée de tous. Bientôt disponible. </h4> </center>
+				</div>
+        </section>
+        <!-- End Hero -->
+
+        
+    </div>
+    <!-- End Wrapper -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/plugins.min.js"></script>
+    <script src="assets/js/main-scripts.js"></script>
+</body>
+</html>
